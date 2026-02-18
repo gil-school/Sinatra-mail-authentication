@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>メール認証システム</title>
+  </head>
+  <body>
+    <h1>メール認証システム</h1>
+    <% if logged_in? %>
+      <p>ようこそ、<%= current_user.name %>さん</p>
+      <a href="/signout">ログアウト</a>
+    <% else %>
+      <p>ログインしていません</p>
+      <a href="/signin">ログイン</a>
+      <a href="/signup">新規登録</a>
+    <% end %>
+  </body>
+</html>
