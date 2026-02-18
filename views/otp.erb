@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ログイン確認</title>
+  </head>
+  <body>
+    <h1>ログイン確認コード</h1>
+    <% if @error %>
+      <p><%= @error %></p>
+    <% end %>
+    <form action="/signin/otp" method="post">
+      <input type="text" name="otp" placeholder="6桁コード">
+      <input type="submit" value="確認">
+    </form>
+  </body>
+</html>
